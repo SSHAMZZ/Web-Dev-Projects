@@ -1,0 +1,31 @@
+body{
+    margin-left: 2rem;
+    background-color: rgb(255, 13, 0);
+}
+.header{
+    font-family: 'Contrail One', sans-serif;;
+    font-size: 3rem;
+    color: rgb(246, 236, 217);
+}
+.features{
+    text-align: center;
+    font-size: 1.6rem;
+}
+.choices{
+    color: black;
+    /* background-color: white; */
+    border: 1rem solid rgb(246, 236, 217);
+    width: 40vw;
+    border-radius: 1rem;
+    padding: 1rem;
+    padding-left: 1.5rem;
+    font-size: 1.35rem;
+    color: rgb(246, 236, 217);
+    font-family: 'Contrail One', sans-serif;
+}
+.footer{
+    margin-top: 5rem;
+    color: rgb(246, 236, 217);
+    font-family: 'Contrail One', sans-serif;
+    text-align: center;
+}
