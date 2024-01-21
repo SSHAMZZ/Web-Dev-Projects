@@ -1,0 +1,476 @@
+body{
+font-family: 'Montserrat', sans-serif;
+margin: 0;
+
+background-color: black;
+color: white;
+overflow:hidden; /*Used for disabling scroll-bar*/
+}
+
+body a{
+    color: white;
+}
+
+.main{
+    display: flex;
+    height: 100vh;
+    padding: 0.25rem 0.5rem;
+    
+}
+       /* Primary divs */
+.sidebar{
+   width:340px;
+   background-color:black;
+   border-radius: 1rem;  /* 1rem=16px */
+   padding-right: 0.5rem;
+}
+.main-content{
+    background-color:rgb(40, 36, 36);
+     flex:1;  /*Indicates that it will take all the remaining space after all other divs have taken thier width */
+     border-radius: 1rem;
+     overflow: auto; /*means that the scroll bar will only appear when we go near it*/
+     padding: 0.5rem;
+     padding-left: 0rem;
+     padding-top: 0rem;
+}
+.music-player{
+    width: 75.2%;
+    height:72px;
+    background-color:rgb(20, 58, 58);
+    
+    position:fixed;
+    bottom: 0px;
+    display: flex;
+    /* justify-content: space-between; */
+    align-content: center;
+}
+a{
+    text-decoration: none;
+}
+        /* Sidebar Nav DIv */
+.nav{
+    background-color:rgb(23, 21, 21);
+   
+    border-radius: 1rem;
+    padding: 0.5rem 0.75px;
+    height: 112px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.nav-option{
+    line-height: 2.5rem;
+    opacity: 0.7;
+    padding: 0.5rem 1.2rem;   
+}
+.nav-option:hover{
+    opacity: 1;   
+}
+.nav-option i, .lib-option i{
+    font-size: 1.25rem;
+    padding-right: 0.7rem;
+}
+.nav-option a, .lib-option a{
+    font-size: 1rem;
+    color: white;
+}
+
+                 /* Sidebar Library DIv */
+.library{
+    background-color:rgb(23, 21, 21);
+    border-radius: 1rem;
+    padding-bottom: 6.3rem;
+}
+.lib-option{
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem;
+    line-height: 2.5rem;
+    padding: 0.5rem 0.83rem;   
+}
+.lib-left{
+    opacity: 0.7;
+}
+.lib-left:hover{
+    opacity: 1;   
+}
+#plus, #arrow{
+    opacity: 0.5;
+    margin-right:0.3rem ;
+
+}
+#plus:hover,#arrow:hover{
+    opacity: 1;   
+}
+
+               /* Sidebar Assets DIv */
+.badges{
+   color: white;
+   background-color: rgb(42, 37, 37);
+   border-radius: 0.9rem;
+   padding: 0.4rem 0.9rem;
+   border: 0px;
+}
+.artists{
+    padding: 0.12rem 0.83rem;   
+    margin-bottom: 0.65rem;
+}
+.badges{
+    opacity: 0.75;
+}
+
+.badges:hover{
+    opacity:1;
+}
+.artist-search{
+    padding: 0.4rem 0.9rem;
+}
+.artist-search>span{
+    display: inline-block;
+    width: 1.1rem;
+    padding: 0.4rem;
+    opacity: 0.7;
+}
+.artist-search>span:hover{
+    border-radius: 1rem;
+    background-color: rgb(42, 37, 37);
+    opacity: 1;
+}
+#lib-search{
+    background-color: rgb(42, 37, 37);
+    border: 0px;
+    border-radius: 0.3rem;
+    color: white;
+    width: 8rem;
+    opacity: 0.7;
+    margin-right: 1rem;
+}
+#lib-search:hover{
+    opacity: 1;
+}
+#lib-sort{
+    background-color: rgb(42, 37, 37);
+    border: 0px;
+    border-radius: 0.3rem;
+    color: white;
+    opacity: 0.7;
+    width: 7rem;
+}
+
+         /*Sidebar Artists Div*/
+
+.artist-names{
+    margin-top: 0.85rem;
+    padding: 0.4rem 0.9rem;
+    margin-bottom: 0.3rem;
+
+}
+.artist-names img{
+    width: auto;
+    height: 55px;
+    border-radius: 3rem;
+    padding: 0.2rem 0.2rem;
+    
+}
+
+.artist-info{
+    display: inline-flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 2.0rem;
+    padding-left: 0.1rem;
+      
+}
+
+#artist-1, #artist-2{
+    height: 3.8rem;
+}
+
+#artist-1:hover, #artist-2:hover{
+    background-color: rgb(42, 37, 37);
+    border-radius: 0.7rem;  
+}
+
+          /*Sidbar box div */
+.box{
+    height: 5.7rem;
+    background-color: rgb(42, 37, 37);
+    border-radius: 0.7rem;
+    padding: 1rem 1.2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+}
+.box-p1{
+    font-size:1.07rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+.box-p2{
+    font-size:0.85rem;
+    opacity:0.75;
+    margin-bottom: 0.5rem;
+}
+.badge{
+    font-family: 'Montserrat', sans-serif;
+    border: 0px;
+    border-radius: 100px;
+    padding: 0.25rem 0.9rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    height:2rem;
+    width: fit-content;
+}
+            /*MAIN CONTENT*/
+            /*MC Sticky NAV DIV*/
+        
+.sticky-nav{
+    
+    display: flex;
+    justify-content: space-between;
+    background-color:rgb(40, 36, 36);
+    position:-webkit-sticky;
+    position: sticky;
+    top: 0px; 
+    width: 100%;
+    line-height: 2.9rem;
+    padding: 0.4rem 0.2rem; 
+    padding-left: 0.7rem;
+    z-index: 1;
+}
+.sticky-nav-badges{
+    padding-right: 1.2rem;
+}
+.sticky-nav-icons{
+font-size: 1.2rem;
+
+}
+.sticky-nav-icons i{
+    margin-right: 0.25rem;
+    padding: 0.4rem;
+    opacity: 0.7;
+    border-radius: 1rem;
+    background-color: rgb(8, 8, 8);
+}
+.sticky-nav-icons i:hover{
+    opacity: 1;
+}
+
+#explore-premium{
+    font-family: 'Montserrat', sans-serif;
+    padding: 0.4rem 0.9rem;
+    font-size: 0.95rem;
+    border-radius: 1rem;
+    font-weight: 700;
+}
+
+#explore-premium:hover{
+    font-size: 1.02rem;
+}
+#install-app:hover{
+    font-size: 0.95rem;
+}
+
+.snb{
+    font-family: 'Montserrat', sans-serif;
+    padding: 0.4rem 0.9rem;
+    font-size: 0.9rem;
+    border-radius: 1rem;
+    color: white;
+    background-color: black;
+    border: 0px;
+}
+#bell:hover,#user:hover{
+    opacity: 1;
+
+}
+#bell,#user{
+    opacity:0.8;
+}
+        /*MC cards DIV*/
+
+.cards{
+    padding-left: 0.5rem;
+}
+.card{
+background-color: rgb(28, 26, 26);
+width: 10rem;
+height: 13.5rem;
+border-radius: 0.25rem;
+margin-right: 1.2rem;
+margin-top: 1.2rem;
+margin-left: 0.5rem;
+padding: 0.4rem;
+
+}
+
+
+.card-header{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0.5rem;
+}
+.header-badge{
+    background-color: rgb(42, 37, 37);
+    color: white;
+    border: 0;
+    border-radius: 0.4rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    /* padding: 0.4rem; */
+       
+}
+.header-badge:hover{
+    text-decoration: underline;
+}
+.cards-container{
+    display:flex;
+    flex-wrap: wrap;
+     
+}
+.card-img-container{
+    height: 10rem;
+}
+.card img{
+    height: 100%;
+    width: 100%;
+    border-radius: 0.25rem 0.25rem 0rem 0rem;
+}
+.card-title{
+    padding-left: 0.1rem;
+    font-weight: 700;
+    position: relative;
+    bottom: 0.85rem;
+}
+.card-info{
+    font-size: 0.8rem;
+    font-weight: 20;
+    padding-left: 0.1rem;
+    position: relative;
+    bottom: 1.5rem;
+}
+.card:hover{
+    background-color: rgb(55, 48, 48);
+}
+
+
+                 /*MC footer DIV*/
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+.footer-content a{
+    color: white;
+    text-decoration: none;
+    padding: 0.4rem;
+    opacity: 0.7;
+}
+.footer-content a:hover{
+    opacity: 1;
+}
+                  
+                /* MUSIC PLAYER DIV */
+                /*MS Player div */
+
+                
+.album{
+    width: 20%;
+    display: inline-flex;
+    /* background-color: aqua; */
+    padding: 0.4rem;
+
+}
+.album-img-container{
+    background-color: red;
+    width: 7rem;
+    margin-right:0.5rem;
+    margin-bottom: 5rem;
+    /* display: inline-flex; */
+    flex-direction: column;
+   
+}
+.album-img-container img{
+    width: 100%;
+}
+.album-info-container{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+ 
+    width: 100%;
+}
+
+.player{
+    width: 50%;
+    /* background-color: aqua; */
+}
+
+.player-controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.player-controls i {
+    margin-right: 1.5rem;
+    margin-top: 0.7rem;
+    opacity:0.7
+}
+.player-controls i:hover, .other-features i:hover{
+    opacity :1;
+}
+
+#play-button{
+font-size: 1.8rem;
+
+border-radius: 2rem; 
+opacity: 1;  
+}
+.playback-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.progress-bar{
+    width: 70%;
+    appearance: none; /*the og styling that css gives to a range input type */
+    /* background-color: transparent; */
+    cursor: pointer;
+
+}
+.progress-bar::-webkit-slider-runnable-track{
+    background-color: aqua;
+    border-radius: 100px;
+    height:0.15rem;
+   
+}
+
+.progress-bar::-webkit-slider-thumb{
+    appearance: none;
+    height:1rem;
+    width: 1rem;
+    background-color: azure;
+    border-radius:50% ;
+    margin-top: -0.4rem;
+   
+}
+.progress-bar::-webkit-slider-runnable-track:hover {
+    box-shadow: 0rem 0.1rem aqua;
+}
+.progress-bar::-webkit-slider-thumb:hover{
+    background-color: aqua;
+}
+
+.other-features{
+    width: 30%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.other-features i{
+   opacity: 0.7;
+   margin-right: 0.7rem;
+}

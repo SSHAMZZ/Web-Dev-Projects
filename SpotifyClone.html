@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify -Web Player: Music for everyone</title>
+      
+    <link rel="stylesheet" href="SpotifyClone.css">
+    
+    <!--Fonts awersome link-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Kalam:wght@300&family=Lugrasimo&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+       
+    <!-- BOOTSRAP CSS LINK 
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
+
+    <!--BOOTSRAP Js LINK-->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script> -->
+
+    <!--Tab Icon-->
+    <link rel="icon" href="./Assets/Spotify_logo_trial 2.png">
+    
+</head>
+<body>
+  <main>
+    <div class="main">
+      
+        <div class="sidebar">
+          <div class="nav">
+            <div class="nav-option"style ="opacity:1">
+              <i class="fa-solid fa-house"></i>
+              <a href="#">Home</a>
+            </div>
+            <div class="nav-option">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <a href="https://open.spotify.com/search">Search</a>
+            </div>
+          </div>
+
+        <div class="library">
+          <div class="lib-option">
+            <div class="lib-left">
+              <i class="fa-solid fa-book-open"></i>
+              <a href="#">Your Library</a>
+            </div>
+            <div class="lib-right">
+              <i id = "plus" class="fa-solid fa-plus"></i>
+              <i id = "arrow"class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+
+          <div class="artists">
+            <button class="badges">Artists</button>
+          </div>
+
+          <div class="artist-search">
+            <span> <i class="fa-solid fa-magnifying-glass"></i></span>
+            <input type="search" placeholder="Search your library" id="lib-search">
+            <select id="lib-sort" name = "period">
+              <option selected>Sort By</option>
+              <option value="Recents">Recents</option>
+              <option value="Recently Added">Recently Added</option>
+              <option value="Alphabetical">Alphabetical</option>
+              <option value="Creator">Creator</option>
+            </select>
+          </div>
+
+          <div class="artist-names">
+            <a href="https://open.spotify.com/artist/6VuMaDnrHyPL1p4EHjYLi7">
+              <div id="artist-1">
+                <span>
+                  <img src="./Assets/Charlie Puth.jpeg" alt="Charlie Puth">
+                </span>
+                <span class="artist-info">
+                  <span style="font-weight: 700;">Charlie Puth</span>
+                  <span style="font-size: 0.7rem;">Artist</span>
+                </span>
+              </div>
+            </a>
+           <a href="https://open.spotify.com/artist/4YRxDV8wJFPHPTeXepOstw">
+              <div id="artist-2">
+                <span>
+                  <img src="./Assets/Arijit Singh.jpeg" alt="Arijit Singh">
+                </span>
+                <span class="artist-info">
+                  <span style="font-weight: 700;">Arijit Singh</span>
+                  <span style="font-size: 0.7rem;">Artist</span>
+                </span>
+              </div>
+           </a>
+          </div>
+          <div class="lib-boxes">
+            <div class="box">
+               <div class="box-p1">
+                 Create your first playlist
+               </div>
+               <div class="box-p2">
+                  It's easy we'll help you
+               </div>
+               <a href="https://open.spotify.com/playlist/6pqg7nk9US8RpBOmzYBD5Q">
+                 <button class="badge">
+                    Create Playlist
+                 </button>
+               </a>
+            </div>
+          </div>
+        </div> 
+        </div>
+        <div class="main-content">
+           <div class="sticky-nav">
+             <div class="sticky-nav-icons">
+              <i class="fa-solid fa-arrow-left"></i>
+              <i class="fa-solid fa-arrow-right"></i>
+             </div>
+             <div class="sticky-nav-badges">
+            <a href="https://www.spotify.com/in-en/premium/?utm_source=app&utm_medium=desktop&utm_campaign=upgrade&ref=web_loggedin_upgrade_button">
+                <button id="explore-premium">
+                   Explore Premium
+                </button>
+            </a>
+             <a href="https://open.spotify.com/download">
+                <button class = "snb" id="install-app">
+                  Install App 
+                  <i class="fa-solid fa-download"></i>
+               </button>
+             </a>
+             <a href="https://open.spotify.com/content-feed">
+               <button class = "snb" id="bell">
+                  <i class="fa-solid fa-bell"></i>
+               </button>
+             </a>
+             <a href="https://www.spotify.com/in-en/account/overview/?utm_source=spotify&utm_medium=menu&utm_campaign=your_account">
+               <button class = "snb" id="user">
+                 <i class="fa-solid fa-user"></i>
+              </button>
+             </a>
+             </div>
+           </div>
+            
+           <div class="card-header">
+             <h2>Recently Played</h2>
+             <button class = "header-badge">Show all</button>
+           </div> 
+              <div class="cards-container">
+                <a href="https://open.spotify.com/track/4nc6XiUze2Yh7wFueGOPv7">
+                 <div class="card">
+                    <div class="card-img-container">
+                    <img src="./Assets/Chaleya Thumbnail.jpeg" class="card-img" alt="Chaleya">
+                  </div>
+                    <p class="card-title">Chaleya</p>
+                    <p class="card-info">Arijit Singh-Jawan</p>
+                  </div>
+                </a>
+                <a href="https://open.spotify.com/track/5LrN7yUQAzvthd4QujgPFr">
+                  <div class="card">
+                    <div class="card-img-container">
+                      <img src="./Assets/Here with me.jpg" class="card-img" alt="Here with me">
+                    </div>
+                    <p class="card-title">Here with me</p>
+                    <p class="card-info">d4vd</p>
+                  </div>
+                </a>
+
+                 <a href="https://open.spotify.com/track/3TzPVU3jj6YdTunVdKimiQ">
+                    <div class="card">
+                      <div class="card-img-container">
+                        <img src="./Assets/Ghost-phonk.jpg" class="card-img" alt="Ghost!">
+                      </div>
+                      <p class="card-title">GHOST!</p>
+                      <p class="card-info">KIIXSHI-phonk.me</p>
+                    </div>
+                 </a>
+                  <a href="https://open.spotify.com/track/6UeEm5XPsleVD85kNHCu1n">
+                    <div class="card">
+                      <div class="card-img-container">
+                        <img src="./Assets/Kishore Kumar.jpg" class="card-img" alt="Ye shaam mastani">
+                      </div>
+                      <p class="card-title">Ye shaam mastani</p>
+                      <p class="card-info">Kishore Kumar-Legendary</p>
+                    </div>
+                  </a>
+                  <a href="https://open.spotify.com/album/3TyjCYk8LVQYXhEqysolXO">
+                    <div class="card">
+                      <div class="card-img-container">
+                        <img src="./Assets/Obito and rin.jpg" class="card-img" alt="I have seen much">
+                      </div>
+                      <p class="card-title">I have seen much</p>
+                      <p class="card-info">Obito x Rin - Naruto Shippuden</p>
+                    </div>
+                  </div>
+                  </a>
+                <div class="card-header">
+                  <h2>Trending Now</h2>
+                  <button class = "header-badge">Show all</button>
+                </div> 
+                <div class="cards-container">
+                   <a href="https://open.spotify.com/playlist/0q55nsUOxBTEH4kEoDJlYi">
+                     <div class="card">
+                        <div class="card-img-container">
+                        <img src="./Assets/Trending 1.jpg" class="card-img" alt="retro">
+                      </div>
+                        <p class="card-title">Retro Album</p>
+                        <p class="card-info">Top  Hits - Retro music</p>
+                      </div>
+                   </a>
+                   <a href="https://open.spotify.com/show/0SOrvlLluOqI9b9C1znhHo">
+                      <div class="card">
+                        <div class="card-img-container">
+                        <img src="./Assets/Trending-2.jpg" class="card-img" alt="Cars">
+                      </div>
+                        <p class="card-title">Drive Club</p>
+                        <p class="card-info">The popular automotive podcast</p>
+                      </div>
+                   </a>
+                    <a href="https://open.spotify.com/show/1K7FhOj8VnfELSYCh76fEw">
+                      <div class="card">
+                        <div class="card-img-container">
+                        <img src="./Assets/Trending-3.jpg" class="card-img" alt="AI">
+                      </div>
+                        <p class="card-title">AI Takeover?</p>
+                        <p class="card-info">The inevitable future</p>
+                      </div>
+                    </a>
+                    <a href="https://open.spotify.com/episode/4o5GVI9CSw4aqlarjnxEgj">
+                      <div class="card">
+                        <div class="card-img-container">
+                        <img src="./Assets/Trending-5.jpg" class="card-img" alt="MN">
+                      </div>
+                        <p class="card-title">MN Speaks</p>
+                        <p class="card-info">Nikhil in conversation with Sadhguru</p>
+                      </div>
+                    </a>
+                    <a href="https://open.spotify.com/playlist/4F9XjRMCeyxlmysK16V85W">
+                      <div class="card">
+                        <div class="card-img-container">
+                        <img src="./Assets/Trending-4.jpg" class="card-img" alt="RJ">
+                      </div>
+                        <p class="card-title">RJ MIX</p>
+                        <p class="card-info">Tune into the beat!</p>
+                      </div>
+                    </a>
+                </div>
+                <div class="card-header">
+                  <h2>Your playlists</h2>
+                  <button class = "header-badge">Show all</button>
+                </div> 
+                <div class="cards-container">
+                   <a href="https://open.spotify.com/playlist/6pqg7nk9US8RpBOmzYBD5Q">
+                     <div class="card">
+                        <div class="card-img-container">
+                        <img src="./Assets/Shayad.jpg" class="card-img" alt="Her">
+                      </div>
+                        <p class="card-title">Her</p>
+                        <p class="card-info">Golden light</p>
+                      </div>
+                   </a>
+                    <a href = "https://open.spotify.com/playlist/2acf1Jqu1d0pVRU232HSbd">
+                      <div class="card">
+                        <div class="card-img-container">
+                        <img src="./Assets/Made for you-1.jpg" class="card-img" alt="Charlie-mix">
+                      </div>
+                        <p class="card-title">Charlie</p>
+                        <p class="card-info">We don't talk anymore</p>
+                      </div>
+                    </a>
+                    <a href="https://open.spotify.com/playlist/10LNWpTZ0eFYzQeOOst55d">
+                      <div class="card">
+                        <div class="card-img-container">
+                        <img src="./Assets/Made for you-2.jpg" class="card-img" alt="Chill music">
+                      </div>
+                        <p class="card-title">Peace</p>
+                        <p class="card-info">The break we need</p>
+                      </div>
+                    </a>
+                    <a href="https://open.spotify.com/playlist/1qSPZTgjy0vOmrbSDhmKYO">
+                      <div class="card">
+                        <div class="card-img-container">
+                        <img src="./Assets/Made for you-3.jpg" class="card-img" alt="boywithuke">
+                      </div>
+                        <p class="card-title">BoyWithUke</p>
+                        <p class="card-info">Work along!</p>
+                      </div>
+                    </a>
+                   
+                    
+        </div>
+        <br><br><br>
+        <hr>
+        <div class="footer-content">
+          <div class = "footer-content.left">
+            <a href="#">Legal</a>
+            <a href="#">Privacy Center</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Cookies</a>
+            <a href="#">About Ads</a>
+            <a href="#">Accesibility</a>
+          </div>
+          <div class = "footer-content.right">
+           <a href="#"> <i class="fa-regular fa-copyright"></i> Spotify AB</a>
+          </div>
+        
+        </div>
+        <br><br><br><br><br>
+        <div class="music-player"> 
+           <div class="album">
+             <div class="album-img-container">
+               <img src="./Assets/Namo Namo.jpg" alt="Namo Namo">
+             </div>
+             <div class="album-info-container">
+               <a href="https://open.spotify.com/episode/3QIYrlJreG2Huteq3nLnWV"><span style="font-size:1.07rem ;">Namo Namo<span></a>
+               <span style="font-size:0.8rem ;">Kedarnath</span>
+             </div>
+           </div>
+           
+        
+         <div class="player">
+            <div class="player-controls">
+              <i class="fa-solid fa-shuffle"></i>
+              <i class="fa-solid fa-backward-step"></i>
+              <a href="https://open.spotify.com/episode/3QIYrlJreG2Huteq3nLnWV"><i class="fa-solid fa-circle-play" id = "play-button"></i></a>
+              <i class="fa-solid fa-forward-step"></i>
+              <i class="fa-solid fa-repeat"></i>
+            </div>
+            <div class="playback-bar">
+              <span class="current-time">
+                00:00
+              </span>
+              <input type="range" min="0" max="100" class="progress-bar" step="1">
+              <span class="total-time">
+                 3:33
+              </span>
+            </div>
+          </div>
+         <div class="other-features">
+          <i class="fa-solid fa-clapperboard"></i>
+          <i class="fa-solid fa-microphone-lines"></i>
+          <i class="fa-solid fa-grip-lines"></i>
+          <i class="fa-solid fa-link"></i>
+          <i class="fa-solid fa-volume-high"></i>
+          <input type="range" min="0" max="100"
+          step="1" class="progress-bar">
+          <i class="fa-solid fa-laptop"></i>
+         </div>
+       </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
